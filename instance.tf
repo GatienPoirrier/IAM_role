@@ -8,7 +8,7 @@ resource "aws_instance" "web" {
 
   associate_public_ip_address = "true"
 
-  key_name = "myTerraKP"
+  key_name = "${var.KP}"
 
   user_data = "${data.template_file.userdata1.rendered}"
 
